@@ -1,0 +1,6 @@
+framework module Pods_190ChemLab {
+  umbrella header "Pods-190ChemLab-umbrella.h"
+
+  export *
+  module * { export * }
+}

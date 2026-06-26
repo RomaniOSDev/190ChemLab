@@ -3,33 +3,137 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 60;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		30C950C42FEEFC54007129A4 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950732FEEFC54007129A4 /* AnimatedButton.swift */; };
+		30C950C52FEEFC54007129A4 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950742FEEFC54007129A4 /* BadgeView.swift */; };
+		30C950C62FEEFC54007129A4 /* BoundedFillImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950752FEEFC54007129A4 /* BoundedFillImage.swift */; };
+		30C950C72FEEFC54007129A4 /* ElementOrbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950762FEEFC54007129A4 /* ElementOrbView.swift */; };
+		30C950C82FEEFC54007129A4 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950772FEEFC54007129A4 /* EmptyStateView.swift */; };
+		30C950C92FEEFC54007129A4 /* FilterChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950782FEEFC54007129A4 /* FilterChipView.swift */; };
+		30C950CA2FEEFC54007129A4 /* GlassCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950792FEEFC54007129A4 /* GlassCard.swift */; };
+		30C950CB2FEEFC54007129A4 /* GlowEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9507A2FEEFC54007129A4 /* GlowEffect.swift */; };
+		30C950CC2FEEFC54007129A4 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9507B2FEEFC54007129A4 /* GradientBackground.swift */; };
+		30C950CD2FEEFC54007129A4 /* MenuTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9507C2FEEFC54007129A4 /* MenuTileView.swift */; };
+		30C950CE2FEEFC54007129A4 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9507D2FEEFC54007129A4 /* ProgressRingView.swift */; };
+		30C950CF2FEEFC54007129A4 /* RecentExperimentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9507E2FEEFC54007129A4 /* RecentExperimentRow.swift */; };
+		30C950D02FEEFC54007129A4 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9507F2FEEFC54007129A4 /* SearchBarView.swift */; };
+		30C950D12FEEFC54007129A4 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950802FEEFC54007129A4 /* SectionHeaderView.swift */; };
+		30C950D22FEEFC54007129A4 /* StatTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950812FEEFC54007129A4 /* StatTileView.swift */; };
+		30C950D32FEEFC54007129A4 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950832FEEFC54007129A4 /* Color+Hex.swift */; };
+		30C950D42FEEFC54007129A4 /* AppLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950852FEEFC54007129A4 /* AppLinks.swift */; };
+		30C950D52FEEFC54007129A4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950882FEEFC54007129A4 /* AppCoordinator.swift */; };
+		30C950D62FEEFC54007129A4 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9508A2FEEFC54007129A4 /* Element.swift */; };
+		30C950D72FEEFC54007129A4 /* Experiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9508B2FEEFC54007129A4 /* Experiment.swift */; };
+		30C950D82FEEFC54007129A4 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9508C2FEEFC54007129A4 /* Inventory.swift */; };
+		30C950D92FEEFC54007129A4 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9508D2FEEFC54007129A4 /* OnboardingPage.swift */; };
+		30C950DA2FEEFC54007129A4 /* Reaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9508E2FEEFC54007129A4 /* Reaction.swift */; };
+		30C950DB2FEEFC54007129A4 /* ElementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950902FEEFC54007129A4 /* ElementService.swift */; };
+		30C950DC2FEEFC54007129A4 /* OnboardingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950912FEEFC54007129A4 /* OnboardingService.swift */; };
+		30C950DD2FEEFC54007129A4 /* ReactionEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950922FEEFC54007129A4 /* ReactionEngine.swift */; };
+		30C950DE2FEEFC54007129A4 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950932FEEFC54007129A4 /* StorageService.swift */; };
+		30C950DF2FEEFC54007129A4 /* ElementFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950952FEEFC54007129A4 /* ElementFormViewModel.swift */; };
+		30C950E02FEEFC54007129A4 /* ElementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950962FEEFC54007129A4 /* ElementListViewModel.swift */; };
+		30C950E12FEEFC54007129A4 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950972FEEFC54007129A4 /* HomeViewModel.swift */; };
+		30C950E22FEEFC54007129A4 /* LabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950982FEEFC54007129A4 /* LabViewModel.swift */; };
+		30C950E32FEEFC54007129A4 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950992FEEFC54007129A4 /* OnboardingViewModel.swift */; };
+		30C950E42FEEFC54007129A4 /* ReactionBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9509A2FEEFC54007129A4 /* ReactionBookViewModel.swift */; };
+		30C950E52FEEFC54007129A4 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9509B2FEEFC54007129A4 /* SettingsViewModel.swift */; };
+		30C950E62FEEFC54007129A4 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9509C2FEEFC54007129A4 /* StatisticsViewModel.swift */; };
+		30C950E72FEEFC54007129A4 /* ElementFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9509E2FEEFC54007129A4 /* ElementFormView.swift */; };
+		30C950E82FEEFC54007129A4 /* ElementCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A02FEEFC54007129A4 /* ElementCardView.swift */; };
+		30C950E92FEEFC54007129A4 /* ElementDetailSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A12FEEFC54007129A4 /* ElementDetailSheet.swift */; };
+		30C950EA2FEEFC54007129A4 /* ElementListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A22FEEFC54007129A4 /* ElementListView.swift */; };
+		30C950EB2FEEFC54007129A4 /* HomeWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A42FEEFC54007129A4 /* HomeWidgets.swift */; };
+		30C950EC2FEEFC54007129A4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A62FEEFC54007129A4 /* HomeView.swift */; };
+		30C950ED2FEEFC54007129A4 /* ElementSlotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A82FEEFC54007129A4 /* ElementSlotView.swift */; };
+		30C950EE2FEEFC54007129A4 /* LabElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950A92FEEFC54007129A4 /* LabElementCell.swift */; };
+		30C950EF2FEEFC54007129A4 /* LabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950AA2FEEFC54007129A4 /* LabView.swift */; };
+		30C950F02FEEFC54007129A4 /* ReactionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950AB2FEEFC54007129A4 /* ReactionAnimationView.swift */; };
+		30C950F12FEEFC54007129A4 /* OnboardingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950AD2FEEFC54007129A4 /* OnboardingPageView.swift */; };
+		30C950F22FEEFC54007129A4 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950AE2FEEFC54007129A4 /* OnboardingView.swift */; };
+		30C950F32FEEFC54007129A4 /* ReactionBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950B02FEEFC54007129A4 /* ReactionBookView.swift */; };
+		30C950F42FEEFC54007129A4 /* ReactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950B12FEEFC54007129A4 /* ReactionCardView.swift */; };
+		30C950F52FEEFC54007129A4 /* SettingRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950B32FEEFC54007129A4 /* SettingRowView.swift */; };
+		30C950F62FEEFC54007129A4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950B42FEEFC54007129A4 /* SettingsView.swift */; };
+		30C950F72FEEFC54007129A4 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950B62FEEFC54007129A4 /* StatisticsView.swift */; };
+		30C950F82FEEFC54007129A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950B92FEEFC54007129A4 /* AppDelegate.swift */; };
+		30C950F92FEEFC54007129A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950BB2FEEFC54007129A4 /* ContentView.swift */; };
+		30C950FA2FEEFC54007129A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950C12FEEFC54007129A4 /* SceneDelegate.swift */; };
+		30C950FB2FEEFC54007129A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C950C22FEEFC54007129A4 /* ViewController.swift */; };
+		30C950FC2FEEFC54007129A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C950BA2FEEFC54007129A4 /* Assets.xcassets */; };
+		30C950FE2FEEFC54007129A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C950BE2FEEFC54007129A4 /* LaunchScreen.storyboard */; };
+		30C950FF2FEEFC54007129A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30C950C02FEEFC54007129A4 /* Main.storyboard */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30C94D892FEE708A007129A4 /* 190ChemLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 190ChemLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C950732FEEFC54007129A4 /* AnimatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
+		30C950742FEEFC54007129A4 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		30C950752FEEFC54007129A4 /* BoundedFillImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundedFillImage.swift; sourceTree = "<group>"; };
+		30C950762FEEFC54007129A4 /* ElementOrbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementOrbView.swift; sourceTree = "<group>"; };
+		30C950772FEEFC54007129A4 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		30C950782FEEFC54007129A4 /* FilterChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChipView.swift; sourceTree = "<group>"; };
+		30C950792FEEFC54007129A4 /* GlassCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassCard.swift; sourceTree = "<group>"; };
+		30C9507A2FEEFC54007129A4 /* GlowEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowEffect.swift; sourceTree = "<group>"; };
+		30C9507B2FEEFC54007129A4 /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
+		30C9507C2FEEFC54007129A4 /* MenuTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTileView.swift; sourceTree = "<group>"; };
+		30C9507D2FEEFC54007129A4 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		30C9507E2FEEFC54007129A4 /* RecentExperimentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentExperimentRow.swift; sourceTree = "<group>"; };
+		30C9507F2FEEFC54007129A4 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		30C950802FEEFC54007129A4 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
+		30C950812FEEFC54007129A4 /* StatTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatTileView.swift; sourceTree = "<group>"; };
+		30C950832FEEFC54007129A4 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		30C950852FEEFC54007129A4 /* AppLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLinks.swift; sourceTree = "<group>"; };
+		30C950882FEEFC54007129A4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		30C9508A2FEEFC54007129A4 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		30C9508B2FEEFC54007129A4 /* Experiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Experiment.swift; sourceTree = "<group>"; };
+		30C9508C2FEEFC54007129A4 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		30C9508D2FEEFC54007129A4 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		30C9508E2FEEFC54007129A4 /* Reaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reaction.swift; sourceTree = "<group>"; };
+		30C950902FEEFC54007129A4 /* ElementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementService.swift; sourceTree = "<group>"; };
+		30C950912FEEFC54007129A4 /* OnboardingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingService.swift; sourceTree = "<group>"; };
+		30C950922FEEFC54007129A4 /* ReactionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionEngine.swift; sourceTree = "<group>"; };
+		30C950932FEEFC54007129A4 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		30C950952FEEFC54007129A4 /* ElementFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementFormViewModel.swift; sourceTree = "<group>"; };
+		30C950962FEEFC54007129A4 /* ElementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementListViewModel.swift; sourceTree = "<group>"; };
+		30C950972FEEFC54007129A4 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		30C950982FEEFC54007129A4 /* LabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabViewModel.swift; sourceTree = "<group>"; };
+		30C950992FEEFC54007129A4 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		30C9509A2FEEFC54007129A4 /* ReactionBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionBookViewModel.swift; sourceTree = "<group>"; };
+		30C9509B2FEEFC54007129A4 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		30C9509C2FEEFC54007129A4 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		30C9509E2FEEFC54007129A4 /* ElementFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementFormView.swift; sourceTree = "<group>"; };
+		30C950A02FEEFC54007129A4 /* ElementCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCardView.swift; sourceTree = "<group>"; };
+		30C950A12FEEFC54007129A4 /* ElementDetailSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailSheet.swift; sourceTree = "<group>"; };
+		30C950A22FEEFC54007129A4 /* ElementListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementListView.swift; sourceTree = "<group>"; };
+		30C950A42FEEFC54007129A4 /* HomeWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWidgets.swift; sourceTree = "<group>"; };
+		30C950A62FEEFC54007129A4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		30C950A82FEEFC54007129A4 /* ElementSlotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementSlotView.swift; sourceTree = "<group>"; };
+		30C950A92FEEFC54007129A4 /* LabElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabElementCell.swift; sourceTree = "<group>"; };
+		30C950AA2FEEFC54007129A4 /* LabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabView.swift; sourceTree = "<group>"; };
+		30C950AB2FEEFC54007129A4 /* ReactionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionAnimationView.swift; sourceTree = "<group>"; };
+		30C950AD2FEEFC54007129A4 /* OnboardingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageView.swift; sourceTree = "<group>"; };
+		30C950AE2FEEFC54007129A4 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		30C950B02FEEFC54007129A4 /* ReactionBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionBookView.swift; sourceTree = "<group>"; };
+		30C950B12FEEFC54007129A4 /* ReactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionCardView.swift; sourceTree = "<group>"; };
+		30C950B32FEEFC54007129A4 /* SettingRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRowView.swift; sourceTree = "<group>"; };
+		30C950B42FEEFC54007129A4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		30C950B62FEEFC54007129A4 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		30C950B92FEEFC54007129A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30C950BA2FEEFC54007129A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30C950BB2FEEFC54007129A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		30C950BC2FEEFC54007129A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30C950BD2FEEFC54007129A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30C950BF2FEEFC54007129A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30C950C12FEEFC54007129A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		30C950C22FEEFC54007129A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D61F30244AD999841D1E4EC /* Pods_190ChemLab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_190ChemLab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C578118C6FD65AD58D4D03F /* Pods-190ChemLab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-190ChemLab.debug.xcconfig"; path = "Target Support Files/Pods-190ChemLab/Pods-190ChemLab.debug.xcconfig"; sourceTree = "<group>"; };
+		8E2E108F5C80539B0A4EBF69 /* Pods-190ChemLab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-190ChemLab.release.xcconfig"; path = "Target Support Files/Pods-190ChemLab/Pods-190ChemLab.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		30C94D9B2FEE708C007129A4 /* Exceptions for "190ChemLab" folder in "190ChemLab" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 30C94D882FEE708A007129A4 /* 190ChemLab */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		30C94D8B2FEE708A007129A4 /* 190ChemLab */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				30C94D9B2FEE708C007129A4 /* Exceptions for "190ChemLab" folder in "190ChemLab" target */,
-			);
-			path = 190ChemLab;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		30C94D862FEE708A007129A4 /* Frameworks */ = {
@@ -42,11 +146,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FE3390E82C9902C1774C7FA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C578118C6FD65AD58D4D03F /* Pods-190ChemLab.debug.xcconfig */,
+				8E2E108F5C80539B0A4EBF69 /* Pods-190ChemLab.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		30C94D802FEE708A007129A4 = {
 			isa = PBXGroup;
 			children = (
-				30C94D8B2FEE708A007129A4 /* 190ChemLab */,
+				30C950C32FEEFC54007129A4 /* 190ChemLab */,
 				30C94D8A2FEE708A007129A4 /* Products */,
+				2FE3390E82C9902C1774C7FA /* Pods */,
+				3C5EC263191C225C16F02AE7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +173,225 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		30C950822FEEFC54007129A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30C950732FEEFC54007129A4 /* AnimatedButton.swift */,
+				30C950742FEEFC54007129A4 /* BadgeView.swift */,
+				30C950752FEEFC54007129A4 /* BoundedFillImage.swift */,
+				30C950762FEEFC54007129A4 /* ElementOrbView.swift */,
+				30C950772FEEFC54007129A4 /* EmptyStateView.swift */,
+				30C950782FEEFC54007129A4 /* FilterChipView.swift */,
+				30C950792FEEFC54007129A4 /* GlassCard.swift */,
+				30C9507A2FEEFC54007129A4 /* GlowEffect.swift */,
+				30C9507B2FEEFC54007129A4 /* GradientBackground.swift */,
+				30C9507C2FEEFC54007129A4 /* MenuTileView.swift */,
+				30C9507D2FEEFC54007129A4 /* ProgressRingView.swift */,
+				30C9507E2FEEFC54007129A4 /* RecentExperimentRow.swift */,
+				30C9507F2FEEFC54007129A4 /* SearchBarView.swift */,
+				30C950802FEEFC54007129A4 /* SectionHeaderView.swift */,
+				30C950812FEEFC54007129A4 /* StatTileView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30C950842FEEFC54007129A4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				30C950832FEEFC54007129A4 /* Color+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30C950862FEEFC54007129A4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				30C950852FEEFC54007129A4 /* AppLinks.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		30C950872FEEFC54007129A4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				30C950822FEEFC54007129A4 /* Components */,
+				30C950842FEEFC54007129A4 /* Extensions */,
+				30C950862FEEFC54007129A4 /* Utilities */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		30C950892FEEFC54007129A4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				30C950882FEEFC54007129A4 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		30C9508F2FEEFC54007129A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				30C9508A2FEEFC54007129A4 /* Element.swift */,
+				30C9508B2FEEFC54007129A4 /* Experiment.swift */,
+				30C9508C2FEEFC54007129A4 /* Inventory.swift */,
+				30C9508D2FEEFC54007129A4 /* OnboardingPage.swift */,
+				30C9508E2FEEFC54007129A4 /* Reaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30C950942FEEFC54007129A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				30C950902FEEFC54007129A4 /* ElementService.swift */,
+				30C950912FEEFC54007129A4 /* OnboardingService.swift */,
+				30C950922FEEFC54007129A4 /* ReactionEngine.swift */,
+				30C950932FEEFC54007129A4 /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		30C9509D2FEEFC54007129A4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				30C950952FEEFC54007129A4 /* ElementFormViewModel.swift */,
+				30C950962FEEFC54007129A4 /* ElementListViewModel.swift */,
+				30C950972FEEFC54007129A4 /* HomeViewModel.swift */,
+				30C950982FEEFC54007129A4 /* LabViewModel.swift */,
+				30C950992FEEFC54007129A4 /* OnboardingViewModel.swift */,
+				30C9509A2FEEFC54007129A4 /* ReactionBookViewModel.swift */,
+				30C9509B2FEEFC54007129A4 /* SettingsViewModel.swift */,
+				30C9509C2FEEFC54007129A4 /* StatisticsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		30C9509F2FEEFC54007129A4 /* ElementForm */ = {
+			isa = PBXGroup;
+			children = (
+				30C9509E2FEEFC54007129A4 /* ElementFormView.swift */,
+			);
+			path = ElementForm;
+			sourceTree = "<group>";
+		};
+		30C950A32FEEFC54007129A4 /* ElementList */ = {
+			isa = PBXGroup;
+			children = (
+				30C950A02FEEFC54007129A4 /* ElementCardView.swift */,
+				30C950A12FEEFC54007129A4 /* ElementDetailSheet.swift */,
+				30C950A22FEEFC54007129A4 /* ElementListView.swift */,
+			);
+			path = ElementList;
+			sourceTree = "<group>";
+		};
+		30C950A52FEEFC54007129A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30C950A42FEEFC54007129A4 /* HomeWidgets.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		30C950A72FEEFC54007129A4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				30C950A52FEEFC54007129A4 /* Components */,
+				30C950A62FEEFC54007129A4 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		30C950AC2FEEFC54007129A4 /* Lab */ = {
+			isa = PBXGroup;
+			children = (
+				30C950A82FEEFC54007129A4 /* ElementSlotView.swift */,
+				30C950A92FEEFC54007129A4 /* LabElementCell.swift */,
+				30C950AA2FEEFC54007129A4 /* LabView.swift */,
+				30C950AB2FEEFC54007129A4 /* ReactionAnimationView.swift */,
+			);
+			path = Lab;
+			sourceTree = "<group>";
+		};
+		30C950AF2FEEFC54007129A4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				30C950AD2FEEFC54007129A4 /* OnboardingPageView.swift */,
+				30C950AE2FEEFC54007129A4 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		30C950B22FEEFC54007129A4 /* ReactionBook */ = {
+			isa = PBXGroup;
+			children = (
+				30C950B02FEEFC54007129A4 /* ReactionBookView.swift */,
+				30C950B12FEEFC54007129A4 /* ReactionCardView.swift */,
+			);
+			path = ReactionBook;
+			sourceTree = "<group>";
+		};
+		30C950B52FEEFC54007129A4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				30C950B32FEEFC54007129A4 /* SettingRowView.swift */,
+				30C950B42FEEFC54007129A4 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		30C950B72FEEFC54007129A4 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				30C950B62FEEFC54007129A4 /* StatisticsView.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		30C950B82FEEFC54007129A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				30C9509F2FEEFC54007129A4 /* ElementForm */,
+				30C950A32FEEFC54007129A4 /* ElementList */,
+				30C950A72FEEFC54007129A4 /* Home */,
+				30C950AC2FEEFC54007129A4 /* Lab */,
+				30C950AF2FEEFC54007129A4 /* Onboarding */,
+				30C950B22FEEFC54007129A4 /* ReactionBook */,
+				30C950B52FEEFC54007129A4 /* Settings */,
+				30C950B72FEEFC54007129A4 /* Statistics */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		30C950C32FEEFC54007129A4 /* 190ChemLab */ = {
+			isa = PBXGroup;
+			children = (
+				30C950872FEEFC54007129A4 /* Common */,
+				30C950892FEEFC54007129A4 /* Coordinators */,
+				30C9508F2FEEFC54007129A4 /* Models */,
+				30C950942FEEFC54007129A4 /* Services */,
+				30C9509D2FEEFC54007129A4 /* ViewModels */,
+				30C950B82FEEFC54007129A4 /* Views */,
+				30C950B92FEEFC54007129A4 /* AppDelegate.swift */,
+				30C950BA2FEEFC54007129A4 /* Assets.xcassets */,
+				30C950BB2FEEFC54007129A4 /* ContentView.swift */,
+				30C950BC2FEEFC54007129A4 /* Info.plist */,
+				30C950BE2FEEFC54007129A4 /* LaunchScreen.storyboard */,
+				30C950C02FEEFC54007129A4 /* Main.storyboard */,
+				30C950C12FEEFC54007129A4 /* SceneDelegate.swift */,
+				30C950C22FEEFC54007129A4 /* ViewController.swift */,
+			);
+			path = 190ChemLab;
+			sourceTree = "<group>";
+		};
+		3C5EC263191C225C16F02AE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D61F30244AD999841D1E4EC /* Pods_190ChemLab.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,6 +399,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C94D9C2FEE708C007129A4 /* Build configuration list for PBXNativeTarget "190ChemLab" */;
 			buildPhases = (
+				59E324DE09DD99AC4CE1183D /* [CP] Check Pods Manifest.lock */,
 				30C94D852FEE708A007129A4 /* Sources */,
 				30C94D862FEE708A007129A4 /* Frameworks */,
 				30C94D872FEE708A007129A4 /* Resources */,
@@ -73,12 +408,7 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				30C94D8B2FEE708A007129A4 /* 190ChemLab */,
-			);
 			name = 190ChemLab;
-			packageProductDependencies = (
-			);
 			productName = 190ChemLab;
 			productReference = 30C94D892FEE708A007129A4 /* 190ChemLab.app */;
 			productType = "com.apple.product-type.application";
@@ -99,6 +429,7 @@
 				};
 			};
 			buildConfigurationList = 30C94D842FEE708A007129A4 /* Build configuration list for PBXProject "190ChemLab" */;
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -106,8 +437,6 @@
 				Base,
 			);
 			mainGroup = 30C94D802FEE708A007129A4;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 30C94D8A2FEE708A007129A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -122,24 +451,128 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C950FC2FEEFC54007129A4 /* Assets.xcassets in Resources */,
+				30C950FE2FEEFC54007129A4 /* LaunchScreen.storyboard in Resources */,
+				30C950FF2FEEFC54007129A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59E324DE09DD99AC4CE1183D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-190ChemLab-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30C94D852FEE708A007129A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C950C42FEEFC54007129A4 /* AnimatedButton.swift in Sources */,
+				30C950C52FEEFC54007129A4 /* BadgeView.swift in Sources */,
+				30C950C62FEEFC54007129A4 /* BoundedFillImage.swift in Sources */,
+				30C950C72FEEFC54007129A4 /* ElementOrbView.swift in Sources */,
+				30C950C82FEEFC54007129A4 /* EmptyStateView.swift in Sources */,
+				30C950C92FEEFC54007129A4 /* FilterChipView.swift in Sources */,
+				30C950CA2FEEFC54007129A4 /* GlassCard.swift in Sources */,
+				30C950CB2FEEFC54007129A4 /* GlowEffect.swift in Sources */,
+				30C950CC2FEEFC54007129A4 /* GradientBackground.swift in Sources */,
+				30C950CD2FEEFC54007129A4 /* MenuTileView.swift in Sources */,
+				30C950CE2FEEFC54007129A4 /* ProgressRingView.swift in Sources */,
+				30C950CF2FEEFC54007129A4 /* RecentExperimentRow.swift in Sources */,
+				30C950D02FEEFC54007129A4 /* SearchBarView.swift in Sources */,
+				30C950D12FEEFC54007129A4 /* SectionHeaderView.swift in Sources */,
+				30C950D22FEEFC54007129A4 /* StatTileView.swift in Sources */,
+				30C950D32FEEFC54007129A4 /* Color+Hex.swift in Sources */,
+				30C950D42FEEFC54007129A4 /* AppLinks.swift in Sources */,
+				30C950D52FEEFC54007129A4 /* AppCoordinator.swift in Sources */,
+				30C950D62FEEFC54007129A4 /* Element.swift in Sources */,
+				30C950D72FEEFC54007129A4 /* Experiment.swift in Sources */,
+				30C950D82FEEFC54007129A4 /* Inventory.swift in Sources */,
+				30C950D92FEEFC54007129A4 /* OnboardingPage.swift in Sources */,
+				30C950DA2FEEFC54007129A4 /* Reaction.swift in Sources */,
+				30C950DB2FEEFC54007129A4 /* ElementService.swift in Sources */,
+				30C950DC2FEEFC54007129A4 /* OnboardingService.swift in Sources */,
+				30C950DD2FEEFC54007129A4 /* ReactionEngine.swift in Sources */,
+				30C950DE2FEEFC54007129A4 /* StorageService.swift in Sources */,
+				30C950DF2FEEFC54007129A4 /* ElementFormViewModel.swift in Sources */,
+				30C950E02FEEFC54007129A4 /* ElementListViewModel.swift in Sources */,
+				30C950E12FEEFC54007129A4 /* HomeViewModel.swift in Sources */,
+				30C950E22FEEFC54007129A4 /* LabViewModel.swift in Sources */,
+				30C950E32FEEFC54007129A4 /* OnboardingViewModel.swift in Sources */,
+				30C950E42FEEFC54007129A4 /* ReactionBookViewModel.swift in Sources */,
+				30C950E52FEEFC54007129A4 /* SettingsViewModel.swift in Sources */,
+				30C950E62FEEFC54007129A4 /* StatisticsViewModel.swift in Sources */,
+				30C950E72FEEFC54007129A4 /* ElementFormView.swift in Sources */,
+				30C950E82FEEFC54007129A4 /* ElementCardView.swift in Sources */,
+				30C950E92FEEFC54007129A4 /* ElementDetailSheet.swift in Sources */,
+				30C950EA2FEEFC54007129A4 /* ElementListView.swift in Sources */,
+				30C950EB2FEEFC54007129A4 /* HomeWidgets.swift in Sources */,
+				30C950EC2FEEFC54007129A4 /* HomeView.swift in Sources */,
+				30C950ED2FEEFC54007129A4 /* ElementSlotView.swift in Sources */,
+				30C950EE2FEEFC54007129A4 /* LabElementCell.swift in Sources */,
+				30C950EF2FEEFC54007129A4 /* LabView.swift in Sources */,
+				30C950F02FEEFC54007129A4 /* ReactionAnimationView.swift in Sources */,
+				30C950F12FEEFC54007129A4 /* OnboardingPageView.swift in Sources */,
+				30C950F22FEEFC54007129A4 /* OnboardingView.swift in Sources */,
+				30C950F32FEEFC54007129A4 /* ReactionBookView.swift in Sources */,
+				30C950F42FEEFC54007129A4 /* ReactionCardView.swift in Sources */,
+				30C950F52FEEFC54007129A4 /* SettingRowView.swift in Sources */,
+				30C950F62FEEFC54007129A4 /* SettingsView.swift in Sources */,
+				30C950F72FEEFC54007129A4 /* StatisticsView.swift in Sources */,
+				30C950F82FEEFC54007129A4 /* AppDelegate.swift in Sources */,
+				30C950F92FEEFC54007129A4 /* ContentView.swift in Sources */,
+				30C950FA2FEEFC54007129A4 /* SceneDelegate.swift in Sources */,
+				30C950FB2FEEFC54007129A4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		30C950BE2FEEFC54007129A4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30C950BD2FEEFC54007129A4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		30C950C02FEEFC54007129A4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30C950BF2FEEFC54007129A4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		30C94D9D2FEE708C007129A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C578118C6FD65AD58D4D03F /* Pods-190ChemLab.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -147,30 +580,37 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 190ChemLab/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MixelCraft: Reaction Book";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "home.-90ChemLab";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rad.m1x3lcr6ftr36ct10n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		30C94D9E2FEE708C007129A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E2E108F5C80539B0A4EBF69 /* Pods-190ChemLab.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -178,25 +618,31 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = 190ChemLab/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "MixelCraft: Reaction Book";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "home.-90ChemLab";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rad.m1x3lcr6ftr36ct10n;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
