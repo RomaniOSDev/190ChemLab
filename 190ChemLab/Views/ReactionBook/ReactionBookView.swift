@@ -11,39 +11,14 @@ struct ReactionBookView: View {
         ZStack {
             GradientBackground()
 
-            VStack(spacing: 0) {
-                summaryHeader
-                filterTabs
-
-                if viewModel.filteredReactions.isEmpty {
-                    Spacer()
-                    EmptyStateView(
-                        icon: "📖",
-                        title: "No Reactions",
-                        message: "Start mixing elements in the laboratory to discover reactions",
-                        actionTitle: "Go to Lab",
-                        action: { viewModel.goBack() }
-                    )
-                    Spacer()
-                } else {
-                    ScrollView {
-                        LazyVStack(spacing: 12) {
-                            ForEach(viewModel.filteredReactions) { reaction in
-                                ReactionCardView(
-                                    reaction: reaction,
-                                    isLocked: !reaction.isDiscovered,
-                                    element1: viewModel.getElement(by: reaction.element1Id),
-                                    element2: viewModel.getElement(by: reaction.element2Id),
-                                    resultElement: reaction.isDiscovered
-                                        ? viewModel.getElement(by: reaction.resultElementId)
-                                        : nil,
-                                    onTap: { viewModel.showDetail(for: reaction) }
-                                )
-                            }
-                        }
-                        .padding(16)
-                    }
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack(spacing: 0) {
+                    summaryHeader
+                    filterTabs
+                    reactionContent
                 }
+                .readableContentWidth()
+                .padding(.bottom, 32)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -77,6 +52,37 @@ struct ReactionBookView: View {
             }
         }
         .onAppear { viewModel.loadReactions() }
+    }
+
+    @ViewBuilder
+    private var reactionContent: some View {
+        if viewModel.filteredReactions.isEmpty {
+            EmptyStateView(
+                icon: "📖",
+                title: "No Reactions",
+                message: "Start mixing elements in the laboratory to discover reactions",
+                actionTitle: "Go to Lab",
+                action: { viewModel.goBack() }
+            )
+            .padding(.top, 40)
+            .padding(.horizontal, 16)
+        } else {
+            LazyVStack(spacing: 12) {
+                ForEach(viewModel.filteredReactions) { reaction in
+                    ReactionCardView(
+                        reaction: reaction,
+                        isLocked: !reaction.isDiscovered,
+                        element1: viewModel.getElement(by: reaction.element1Id),
+                        element2: viewModel.getElement(by: reaction.element2Id),
+                        resultElement: reaction.isDiscovered
+                            ? viewModel.getElement(by: reaction.resultElementId)
+                            : nil,
+                        onTap: { viewModel.showDetail(for: reaction) }
+                    )
+                }
+            }
+            .padding(16)
+        }
     }
 
     private var summaryHeader: some View {

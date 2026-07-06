@@ -12,7 +12,7 @@ struct StatisticsView: View {
         ZStack {
             GradientBackground()
 
-            ScrollView(showsIndicators: false) {
+            ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 20) {
                     heroStats
                     progressSection
@@ -24,6 +24,8 @@ struct StatisticsView: View {
                     }
                 }
                 .padding(16)
+                .readableContentWidth()
+                .padding(.bottom, 32)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -116,15 +118,14 @@ struct StatisticsView: View {
                     .fontWeight(.bold)
                     .foregroundColor(color)
             }
-            GeometryReader { geo in
-                ZStack(alignment: .leading) {
-                    Capsule().fill(AppColors.cardBackground)
+            Capsule()
+                .fill(AppColors.cardBackground)
+                .overlay(alignment: .leading) {
                     Capsule()
                         .fill(color)
-                        .frame(width: geo.size.width * progress)
+                        .scaleEffect(x: progress, y: 1, anchor: .leading)
                 }
-            }
-            .frame(height: 8)
+                .frame(height: 8)
         }
         .padding(14)
         .frame(maxWidth: .infinity)

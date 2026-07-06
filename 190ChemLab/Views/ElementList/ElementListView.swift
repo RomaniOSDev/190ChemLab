@@ -11,54 +11,19 @@ struct ElementListView: View {
         ZStack {
             GradientBackground()
 
-            VStack(spacing: 0) {
-                summaryBar
-                SearchBarView(text: $viewModel.searchText, placeholder: "Search by name or symbol...")
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 10)
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack(spacing: 0) {
+                    summaryBar
+                    SearchBarView(text: $viewModel.searchText, placeholder: "Search by name or symbol...")
+                        .padding(.horizontal, 16)
+                        .padding(.bottom, 10)
 
-                filterBar
-                sortBar
-
-                if viewModel.filteredElements.isEmpty {
-                    Spacer()
-                    EmptyStateView(
-                        icon: "🔍",
-                        title: "No Elements Found",
-                        message: "Try adjusting your search or filters",
-                        actionTitle: "Add Element",
-                        action: { viewModel.goToElementForm() }
-                    )
-                    Spacer()
-                } else {
-                    ScrollView {
-                        if viewModel.isGridLayout {
-                            LazyVGrid(
-                                columns: [GridItem(.flexible()), GridItem(.flexible())],
-                                spacing: 12
-                            ) {
-                                ForEach(viewModel.filteredElements) { element in
-                                    ElementGridCardView(element: element) {
-                                        viewModel.showElementDetail(element)
-                                    }
-                                }
-                            }
-                            .padding(16)
-                        } else {
-                            LazyVStack(spacing: 12) {
-                                ForEach(viewModel.filteredElements) { element in
-                                    ElementCardView(
-                                        element: element,
-                                        onTap: { viewModel.showElementDetail(element) },
-                                        onEdit: element.isDiscovered ? nil : { viewModel.goToElementForm(element: element) },
-                                        onDelete: element.isDiscovered ? nil : { viewModel.deleteElement(element) }
-                                    )
-                                }
-                            }
-                            .padding(16)
-                        }
-                    }
+                    filterBar
+                    sortBar
+                    elementContent
                 }
+                .readableContentWidth()
+                .padding(.bottom, 32)
             }
         }
         .navigationBarBackButtonHidden(true)
@@ -105,6 +70,45 @@ struct ElementListView: View {
             }
         }
         .onAppear { viewModel.loadElements() }
+    }
+
+    @ViewBuilder
+    private var elementContent: some View {
+        if viewModel.filteredElements.isEmpty {
+            EmptyStateView(
+                icon: "🔍",
+                title: "No Elements Found",
+                message: "Try adjusting your search or filters",
+                actionTitle: "Add Element",
+                action: { viewModel.goToElementForm() }
+            )
+            .padding(.top, 40)
+            .padding(.horizontal, 16)
+        } else if viewModel.isGridLayout {
+            LazyVGrid(
+                columns: [GridItem(.adaptive(minimum: 150, maximum: 200), spacing: 12)],
+                spacing: 12
+            ) {
+                ForEach(viewModel.filteredElements) { element in
+                    ElementGridCardView(element: element) {
+                        viewModel.showElementDetail(element)
+                    }
+                }
+            }
+            .padding(16)
+        } else {
+            LazyVStack(spacing: 12) {
+                ForEach(viewModel.filteredElements) { element in
+                    ElementCardView(
+                        element: element,
+                        onTap: { viewModel.showElementDetail(element) },
+                        onEdit: element.isDiscovered ? nil : { viewModel.goToElementForm(element: element) },
+                        onDelete: element.isDiscovered ? nil : { viewModel.deleteElement(element) }
+                    )
+                }
+            }
+            .padding(16)
+        }
     }
 
     private var summaryBar: some View {

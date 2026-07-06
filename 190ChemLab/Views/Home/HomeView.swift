@@ -5,49 +5,36 @@ struct HomeView: View {
     @ObservedObject var coordinator: AppCoordinator
 
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                GradientBackground()
+        ScreenScrollContainer {
+            VStack(spacing: 16) {
+                HomeHeroBanner(
+                    greeting: viewModel.greeting,
+                    completion: viewModel.completionPercentage,
+                    experiments: viewModel.totalExperiments,
+                    onTapLab: viewModel.goToLab
+                )
 
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack(spacing: 16) {
-                        HomeHeroBanner(
-                            greeting: viewModel.greeting,
-                            completion: viewModel.completionPercentage,
-                            experiments: viewModel.totalExperiments,
-                            onTapLab: viewModel.goToLab
-                        )
+                statsWidgetsRow
+                labWidget
+                widgetGrid
 
-                        statsWidgetsRow
+                HomeFeaturedElementsWidget(
+                    elements: viewModel.featuredElements,
+                    hiddenCount: viewModel.hiddenElements,
+                    onTap: viewModel.goToElementList
+                )
 
-                        labWidget
+                HomeDailyGoalWidget(
+                    completion: viewModel.completionPercentage,
+                    points: viewModel.totalPoints,
+                    successRate: viewModel.successRate
+                )
 
-                        widgetGrid
-
-                        HomeFeaturedElementsWidget(
-                            elements: viewModel.featuredElements,
-                            hiddenCount: viewModel.hiddenElements,
-                            onTap: viewModel.goToElementList
-                        )
-
-                        HomeDailyGoalWidget(
-                            completion: viewModel.completionPercentage,
-                            points: viewModel.totalPoints,
-                            successRate: viewModel.successRate
-                        )
-
-                        if !viewModel.recentExperiments.isEmpty {
-                            recentActivitySection
-                        }
-
-                        bottomActions
-                    }
-                    .padding(.horizontal, 16)
-                    .padding(.top, 12)
-                    .padding(.bottom, 32)
-                    .frame(width: geometry.size.width)
+                if !viewModel.recentExperiments.isEmpty {
+                    recentActivitySection
                 }
-                .frame(width: geometry.size.width)
+
+                bottomActions
             }
         }
         .navigationBarHidden(true)

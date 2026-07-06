@@ -11,7 +11,7 @@ struct SettingsView: View {
         ZStack {
             GradientBackground()
 
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 20) {
                     appInfoCard
                     dataSection
@@ -19,6 +19,8 @@ struct SettingsView: View {
                     aboutSection
                 }
                 .padding(16)
+                .readableContentWidth()
+                .padding(.bottom, 32)
             }
         }
         .navigationBarBackButtonHidden(true)

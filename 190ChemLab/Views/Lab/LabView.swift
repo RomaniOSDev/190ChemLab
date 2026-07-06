@@ -18,12 +18,16 @@ struct LabView: View {
                 )
             }
 
-            VStack(spacing: 0) {
-                labHeader
-                reactionArea
-                mixButton
-                filterBar
-                elementGrid
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack(spacing: 0) {
+                    labHeader
+                    reactionArea
+                    mixButton
+                    filterBar
+                    elementGrid
+                }
+                .readableContentWidth()
+                .padding(.bottom, 32)
             }
             .opacity(viewModel.showAnimation ? 0.25 : 1)
         }
@@ -81,7 +85,7 @@ struct LabView: View {
             }
             Text(label).font(.system(size: 9)).foregroundColor(AppColors.textSecondary)
         }
-        .frame(maxWidth: .infinity)
+        .frame(minWidth: 0, maxWidth: .infinity)
         .padding(.vertical, 10)
         .background(
             RoundedRectangle(cornerRadius: 12, style: .continuous)
@@ -158,32 +162,35 @@ struct LabView: View {
         .padding(.bottom, 8)
     }
 
+    @ViewBuilder
     private var elementGrid: some View {
-        ScrollView {
-            if viewModel.filteredElements.isEmpty {
-                EmptyStateView(
-                    icon: "🔍",
-                    title: "No Elements",
-                    message: "Try a different search or category filter"
-                )
-                .padding(.top, 40)
-            } else {
-                LazyVGrid(
-                    columns: Array(repeating: GridItem(.flexible(), spacing: 10), count: 3),
-                    spacing: 10
-                ) {
-                    ForEach(viewModel.filteredElements) { element in
-                        LabElementCell(
-                            element: element,
-                            slotNumber: slotNumber(for: element.id),
-                            onTap: { viewModel.selectElementAuto(element.id) }
-                        )
-                    }
+        if viewModel.filteredElements.isEmpty {
+            EmptyStateView(
+                icon: "🔍",
+                title: "No Elements",
+                message: "Try a different search or category filter"
+            )
+            .padding(.top, 40)
+            .padding(.horizontal, 16)
+        } else {
+            LazyVGrid(
+                columns: gridColumns,
+                spacing: 10
+            ) {
+                ForEach(viewModel.filteredElements) { element in
+                    LabElementCell(
+                        element: element,
+                        slotNumber: slotNumber(for: element.id),
+                        onTap: { viewModel.selectElementAuto(element.id) }
+                    )
                 }
-                .padding(.horizontal, 16)
-                .padding(.bottom, 20)
             }
+            .padding(.horizontal, 16)
         }
+    }
+
+    private var gridColumns: [GridItem] {
+        [GridItem(.adaptive(minimum: 100, maximum: 140), spacing: 10)]
     }
 
     private func slotNumber(for id: UUID) -> Int? {
@@ -244,7 +251,6 @@ struct ReactionResultSheet: View {
             .font(.system(size: 56))
             .padding(16)
             .background(Circle().fill(color.opacity(0.12)))
-            .glow(color: color, radius: 10)
     }
 
     private func reactionFormula(e1: Element?, e2: Element?, result: Element?) -> some View {
