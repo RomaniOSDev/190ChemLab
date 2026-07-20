@@ -6,8 +6,6 @@ struct AnimatedButton: View {
     let color: Color
     let action: () -> Void
 
-    @State private var isPressed = false
-
     var body: some View {
         Button(action: action) {
             HStack(spacing: 8) {
@@ -31,15 +29,19 @@ struct AnimatedButton: View {
                         )
                     )
             )
-            .glow(color: color, radius: isPressed ? 2 : 8)
-            .scaleEffect(isPressed ? 0.97 : 1)
-            .animation(.easeInOut(duration: 0.15), value: isPressed)
+            .glow(color: color, radius: 8)
         }
-        .buttonStyle(.plain)
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in isPressed = true }
-                .onEnded { _ in isPressed = false }
-        )
+        .buttonStyle(ScalePressButtonStyle(pressedScale: 0.97))
+    }
+}
+
+/// Press feedback that does not steal scroll gestures (unlike DragGesture(minimumDistance: 0)).
+struct ScalePressButtonStyle: ButtonStyle {
+    var pressedScale: CGFloat = 0.98
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .scaleEffect(configuration.isPressed ? pressedScale : 1)
+            .animation(.easeInOut(duration: 0.15), value: configuration.isPressed)
     }
 }

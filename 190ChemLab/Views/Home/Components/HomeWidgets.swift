@@ -58,7 +58,7 @@ struct HomeHeroBanner: View {
                     .stroke(AppColors.accent.opacity(0.35), lineWidth: 1)
             )
         }
-        .buttonStyle(.plain)
+        .buttonStyle(ScalePressButtonStyle())
     }
 }
 
@@ -71,8 +71,6 @@ struct HomeImageWidget: View {
     let accent: Color
     var height: CGFloat = 160
     let action: () -> Void
-
-    @State private var pressed = false
 
     var body: some View {
         Button(action: action) {
@@ -124,14 +122,8 @@ struct HomeImageWidget: View {
                 RoundedRectangle(cornerRadius: 16, style: .continuous)
                     .stroke(accent.opacity(0.3), lineWidth: 1)
             )
-            .scaleEffect(pressed ? 0.98 : 1)
         }
-        .buttonStyle(.plain)
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in pressed = true }
-                .onEnded { _ in pressed = false }
-        )
+        .buttonStyle(ScalePressButtonStyle())
     }
 }
 
@@ -187,7 +179,7 @@ struct HomeCompactWidget: View {
                     )
             )
         }
-        .buttonStyle(.plain)
+        .buttonStyle(ScalePressButtonStyle())
     }
 }
 
@@ -237,7 +229,7 @@ struct HomeFeaturedElementsWidget: View {
                 .padding(12)
             }
         }
-        .buttonStyle(.plain)
+        .buttonStyle(ScalePressButtonStyle())
     }
 }
 

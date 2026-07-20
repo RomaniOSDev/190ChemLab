@@ -207,6 +207,6 @@ struct HomeView: View {
                     )
             )
         }
-        .buttonStyle(.plain)
+        .buttonStyle(ScalePressButtonStyle())
     }
 }

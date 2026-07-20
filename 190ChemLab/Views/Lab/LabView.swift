@@ -18,7 +18,7 @@ struct LabView: View {
                 )
             }
 
-            ScrollView(.vertical, showsIndicators: true) {
+            UIKitScrollView {
                 VStack(spacing: 0) {
                     labHeader
                     reactionArea
@@ -27,10 +27,13 @@ struct LabView: View {
                     elementGrid
                 }
                 .readableContentWidth()
-                .padding(.bottom, 32)
+                .padding(.bottom, 48)
+                .frame(maxWidth: .infinity, alignment: .top)
             }
             .opacity(viewModel.showAnimation ? 0.25 : 1)
+            .allowsHitTesting(!viewModel.showAnimation)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarBackButtonHidden(true)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(AppColors.background, for: .navigationBar)

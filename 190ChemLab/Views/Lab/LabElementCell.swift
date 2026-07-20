@@ -5,8 +5,6 @@ struct LabElementCell: View {
     let slotNumber: Int?
     let onTap: () -> Void
 
-    @State private var isPressed = false
-
     var body: some View {
         Button(action: onTap) {
             VStack(spacing: 6) {
@@ -51,13 +49,7 @@ struct LabElementCell: View {
                         lineWidth: slotNumber != nil ? 2 : 1
                     )
             )
-            .scaleEffect(isPressed ? 0.95 : 1)
         }
-        .buttonStyle(.plain)
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in isPressed = true }
-                .onEnded { _ in isPressed = false }
-        )
+        .buttonStyle(ScalePressButtonStyle(pressedScale: 0.95))
     }
 }

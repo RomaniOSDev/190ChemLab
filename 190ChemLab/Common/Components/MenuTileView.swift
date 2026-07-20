@@ -7,8 +7,6 @@ struct MenuTileView: View {
     let accent: Color
     let action: () -> Void
 
-    @State private var isPressed = false
-
     var body: some View {
         Button(action: action) {
             HStack(spacing: 16) {
@@ -52,13 +50,7 @@ struct MenuTileView: View {
                             .stroke(accent.opacity(0.25), lineWidth: 1)
                     )
             )
-            .scaleEffect(isPressed ? 0.98 : 1)
         }
-        .buttonStyle(.plain)
-        .simultaneousGesture(
-            DragGesture(minimumDistance: 0)
-                .onChanged { _ in isPressed = true }
-                .onEnded { _ in isPressed = false }
-        )
+        .buttonStyle(ScalePressButtonStyle())
     }
 }

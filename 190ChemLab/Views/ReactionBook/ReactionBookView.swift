@@ -11,16 +11,18 @@ struct ReactionBookView: View {
         ZStack {
             GradientBackground()
 
-            ScrollView(.vertical, showsIndicators: true) {
+            UIKitScrollView {
                 VStack(spacing: 0) {
                     summaryHeader
                     filterTabs
                     reactionContent
                 }
                 .readableContentWidth()
-                .padding(.bottom, 32)
+                .padding(.bottom, 48)
+                .frame(maxWidth: .infinity, alignment: .top)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarBackButtonHidden(true)
         .toolbar(.visible, for: .navigationBar)
         .toolbarBackground(AppColors.background, for: .navigationBar)
