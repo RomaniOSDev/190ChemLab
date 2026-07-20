@@ -18,7 +18,7 @@ struct LabView: View {
                 )
             }
 
-            UIKitScrollView {
+            ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
                     labHeader
                     reactionArea
@@ -30,6 +30,7 @@ struct LabView: View {
                 .padding(.bottom, 48)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .clearScrollBackground()
             .opacity(viewModel.showAnimation ? 0.25 : 1)
             .allowsHitTesting(!viewModel.showAnimation)
         }

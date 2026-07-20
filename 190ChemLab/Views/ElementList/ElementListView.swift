@@ -11,7 +11,7 @@ struct ElementListView: View {
         ZStack {
             GradientBackground()
 
-            UIKitScrollView {
+            ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
                     summaryBar
                     SearchBarView(text: $viewModel.searchText, placeholder: "Search by name or symbol...")
@@ -26,6 +26,7 @@ struct ElementListView: View {
                 .padding(.bottom, 48)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .clearScrollBackground()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarBackButtonHidden(true)

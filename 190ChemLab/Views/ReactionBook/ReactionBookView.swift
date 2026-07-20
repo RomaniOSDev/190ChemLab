@@ -11,7 +11,7 @@ struct ReactionBookView: View {
         ZStack {
             GradientBackground()
 
-            UIKitScrollView {
+            ScrollView(.vertical, showsIndicators: true) {
                 VStack(spacing: 0) {
                     summaryHeader
                     filterTabs
@@ -21,6 +21,7 @@ struct ReactionBookView: View {
                 .padding(.bottom, 48)
                 .frame(maxWidth: .infinity, alignment: .top)
             }
+            .clearScrollBackground()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarBackButtonHidden(true)
