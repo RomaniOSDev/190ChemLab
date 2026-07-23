@@ -35,3 +35,13 @@ enum AppColors {
     static let cardBackground = Color("CardBackground")
     static let accentWarning = Color(hex: "ffa500")
 }
+
+/// LoadingViewSyndicate color tokens → ChemLab palette.
+extension Color {
+    static var appBackground: Color { AppColors.background }
+    static var appSurface: Color { AppColors.cardBackground }
+    static var appPrimary: Color { AppColors.accent }
+    static var appAccent: Color { AppColors.accentWarning }
+    static var appTextPrimary: Color { AppColors.textPrimary }
+    static var appTextSecondary: Color { AppColors.textSecondary }
+}
